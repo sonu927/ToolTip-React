@@ -1,10 +1,13 @@
 import React from "react";
 
-const Button = () => {
+const Button = (props) => {
+  console.log(props);
   return (
     <div className="tooltip-container">
-      <span className="tooltip">Tooltip</span>
-      <button>Hover Over Me</button>
+      <button id="hover-btn">Hover Over Me</button>
+      <span className={`tooltip ${props.position || "top"}`}>
+        {props.content ? props.content : "ToolTip"}
+      </span>
     </div>
   );
 };
