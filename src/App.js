@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Button from "./Button";
 function App() {
-  const [content, setContent] = useState("");
-  const [position, setPosition] = useState("top");
-  const [formSubmit, setFormSubmit] = useState(false);
+  const [content, setContent] = useState(""); //text for tooltip
+  const [position, setPosition] = useState("top"); //position for tooltip
+  const [formSubmit, setFormSubmit] = useState(false); //check for setting the content and position of tooltip
 
+  //handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmit(true);
-    console.log("content : ", content);
-    console.log("position : ", position);
   };
   return (
     <div className="App">
